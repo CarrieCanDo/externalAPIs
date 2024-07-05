@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yahoo! Weather</title>
 </head>
 <body>
-    
+    <div class = "container">
+    <div class="input-section">
+        <label for="city">Enter City</label>
+        <input type="city" id="city" placeholder="city">
+        <button onclick="getWeather()">Get Weather</button>
+    </div>
 
-    <script src="app.js"></script>
+    <div class="weather-box">
+        <h2 id="location"></h2>
+        <p id="current_observation"></p>
+
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

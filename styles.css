@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/storm.png'); 
+    background-size: cover; 
+    background-position: center;
+    margin-top: 60px;
+}
+
+.header {
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 30px 0; /* Padding for aesthetic spacing */
+    z-index: 1000; /* Ensure it's above other elements */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+    font-size: 50px; 
+    color:rgb(52, 43, 226);
+    
+    
+}
+
+.container {
+    text-align: center;
+    
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: aliceblue;
+    border-color: rgb(52, 43, 226);
+    -webkit-text-stroke: 1.5px black;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    background-color: rgb(52, 43, 226);
+    padding: 2px 4px 4px 2px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.weather-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the background opacity as needed */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+    
+    
+}
+
+
+
