@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translate</title>
+    <title>Google Translate</title>
     
 </head>
 <body>
-    <h1>Translate</h1>
+    <h1>Google Translate</h1>
+
     <form action="/translate" method="post">
         <label for="textToTranslate">Text to Translate:</label>
         <textarea id="textToTranslate" name="textToTranslate" rows="4" cols="50" required></textarea><br>
@@ -15,9 +16,11 @@
         <input type="text" id="targetLanguage" name="targetLanguage" required><br>
         <button type="submit">Translate</button>
     </form>
+    
     <div id="translatedText"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>

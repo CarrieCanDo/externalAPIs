@@ -21,27 +21,27 @@ app.post('/translate', async (req, res, next) => {
     const textToTranslate = req.body.textToTranslate;
     const targetLanguage = req.body.targetLanguage;
     const sourceLanguage = 'en'; // Assuming the source language is English
+
+})
     
-    try {
-        const response = await axios({
-            method: 'post',
-            url: 'https://google-translate1.p.rapidapi.com/language/translate/v2',
-            headers: {
-                'content-type': 'application/x-www-form-urlencoded',
-                'x-rapidapi-key': '652be5a739msh04db7fc5da19691p10047cjsn7226f46be02e', // Replace with your RapidAPI key
-                'x-rapidapi-host': 'google-translate1.p.rapidapi.com',
-                'Accept-Encoding': 'application/gzip'
-            },
-            data: `q=${encodeURIComponent(textToTranslate)}&target=${encodeURIComponent(targetLanguage)}&source=${encodeURIComponent(sourceLanguage)}`
-        });
-        
-        const translatedText = response.data.data.translations[0].translatedText;
-        res.send(translatedText);
-    } catch (error) {
-        console.error('Error:', error.response.data);
-        next(error); // Pass the error to the next middleware
-    }
-});
+    import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://google-translate1.p.rapidapi.com/language/translate/v2/languages',
+  headers: {
+    'x-rapidapi-key': '652be5a739msh04db7fc5da19691p10047cjsn7226f46be02e',
+    'x-rapidapi-host': 'google-translate1.p.rapidapi.com',
+    'Accept-Encoding': 'application/gzip'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -53,3 +53,4 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+

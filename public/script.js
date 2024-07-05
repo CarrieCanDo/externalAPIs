@@ -12,9 +12,9 @@ document.querySelector('form').addEventListener('submit', async function(event) 
         });
         
         const translatedText = response.data;
-        document.querySelector('#translatedText').innerText = translatedText;
+        document.querySelector('#translatedText').innerContent = translatedText;
     } catch (error) {
         console.error('Error:', error);
-        document.querySelector('#translatedText').innerText = 'Translation error occurred.';
+        document.querySelector('#translatedText').innerContent = 'Translation error occurred.';
     }
 });
