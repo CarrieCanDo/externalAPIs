@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+const path =require("path");
 const cors=require("cors");
 const corsOptions ={
    origin:'*', 
@@ -9,6 +9,7 @@ const corsOptions ={
 }
 
 app.use(cors(corsOptions))
+app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json())
 
 const axios =require( 'axios');
